@@ -7,34 +7,49 @@ url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
 body{
     font-family: 'Poppins', sans-serif;
-    display: flex;
     align-items: center;
     justify-content: center;
     margin: 0; 
     padding: 0;
+    display: flex;
 }
 
+
+
+
 button{
-    background-color: rgb(189, 22, 183) ;
     border: 0;
     border-radius: 5px;
-    color: #fff;
-    padding: 10px 25px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     font-size: 14px;
 }
 
-#btn-open button img{
-    width: 50px;
-    height: 30px;
-    max-width: 100%;
+
+.modal-buttons{
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin-bottom: 5rem;
+}
+
+.modal-open{
+    height: 200px;
+    width: 200px;
+    background-color: transparent;
+    
+}
+
+.modal-open img{
+    width: 200px;
+    height:  200px;
  
 }
 
-#btn-close {
+.btn-close {
     float: right;
+    background-color: paleturquoise;
+    color: black;
     
 }
+
 .modal-container{
     background-color: rgba(0, 0, 0, 0.3);
     position: fixed;
@@ -46,11 +61,15 @@ button{
     align-items: center;
     justify-content: center;
     display: none;
+
 }
 
 
-
-.modal{
+.modal-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 600px;
     max-width: 100%;
     padding: 30px;
@@ -60,6 +79,6 @@ button{
 
 }
 
-.modal img{
+.modal-content img{
     width: 40%;
 }

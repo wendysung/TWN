@@ -1,11 +1,20 @@
-const open = document.getElementById('btn-open');
-const modalContainter = document.getElementById('modal_cointainer');
-const close = document.getElementById('btn-close');
+//getting node list of btn-open
+var modalOpenBtns = document.querySelectorAll('.modal-open');
 
-open.onclick = function(){
-    modalContainter.style.display = "inherit";
-}
+//accessing each modal buttons's data
+modalOpenBtns.forEach(function(btn) {
+    btn.onclick = function(){
+        var modal = btn.getAttribute('data-modal');
 
-close.onclick = function(){
-    modalContainter.style.display = "none";
-}
+        var mondalContainer = document.getElementById(modal);
+        mondalContainer.style.display = "block";
+    }
+})
+
+var modalCloseBtns = document.querySelectorAll('.btn-close')
+
+modalCloseBtns.forEach(function(btn){
+    btn.onclick = function(){
+        var modal = (btn.closest('.modal-container').style.display = 'none');
+    }
+})
