@@ -11,10 +11,7 @@ body{
     justify-content: center;
     margin: 0; 
     padding: 0;
-    display: flex;
 }
-
-
 
 
 button{
@@ -23,6 +20,33 @@ button{
     font-size: 14px;
 }
 
+/*title*/
+.title{
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+}
+
+.title h1{
+    font-size: 50px;
+    margin: 0; 
+}
+
+.title h3{
+    margin: 0; 
+}
+
+/*modal buttons on landing page*/
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
 
 .modal-buttons{
     padding-left: 5rem;
@@ -43,12 +67,15 @@ button{
  
 }
 
-.btn-close {
-    float: right;
-    background-color: paleturquoise;
-    color: black;
-    
+.position{
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 21px;
+    text-align: center;
 }
+
+
+/*modals*/
 
 .modal-container{
     background-color: rgba(0, 0, 0, 0.3);
@@ -64,7 +91,6 @@ button{
 
 }
 
-
 .modal-content{
     position: absolute;
     top: 50%;
@@ -72,13 +98,50 @@ button{
     transform: translate(-50%, -50%);
     width: 600px;
     max-width: 100%;
-    padding: 30px;
+    padding: 40px;
     border-radius: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     background-color: #fff;
+    display: flex ;
+    flex-direction: row;
+    align-items: center;
 
 }
 
-.modal-content img{
-    width: 40%;
+/*modals content left*/
+.modal-left{
+    margin-right: 20px;
 }
+
+.modal-content .modal-left img{
+    width: 180px;
+    height: 180px;
+}
+
+/*modals content right*/
+.modal-right{
+    margin-left: 20px;
+}
+
+.btn-close {
+    float: right;
+    background-color: paleturquoise;
+    color: black;
+    top: 0;
+    
+}
+
+.apply{
+    padding: 1rem 3rem;
+    font-size: 1.125rem;
+    color: black;
+    background: paleturquoise;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+
