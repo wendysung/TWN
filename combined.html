@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!-- <link href="style.css" rel="stylesheet"> -->
+        <script defer src="script.js"></script>
+        <link href="style.css" rel="stylesheet">
+    <title>Sidebar</title>
+  </head>
+  <style>
+    #sidebarCollapse img{
+      height: 40px;
+      width: 40px;
+    }
+    .wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+#sidebar.active {
+    margin-left: -250px;
+}
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+}
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#sidebar {
+    /* don't forget to add all the previously mentioned styles here too */
+    background: #BBE1FA;
+    color: black;
+    transition: all 0.3s;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #BBE1FA;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+    color: black;
+    padding: 5px;
+    font-weight: bold;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+#sidebar ul li a:hover {
+    color: #BBE1FA;
+    background: black;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: black;
+    background: #BBE1FA;
+}
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #BBE1FA;
+}
+#sidebar ul li .form-check {
+    padding-left: 40px;
+}
+  </style>
+  <body>
+
+<div class="wrapper">
+
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>Options</h3>
+        </div>
+        <ul class="list-unstyled components">
+            <p>Sort By</p>
+            <li>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                    Newest to Oldest
+                </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked>
+                <label class="form-check-label" for="exampleRadios2">
+                    Oldest to Newest
+                </label>
+                </div>
+            </li>
+            <li>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" checked>
+                <label class="form-check-label" for="exampleRadios3">
+                    Approaching Deadline
+                </label>
+                </div>
+            </li>
+        </ul>
+        <ul class="list-unstyled components">
+            <p>Filters</p>
+            <li class="active">
+                <a href="#indSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Industry</a>
+                <ul class="collapse list-unstyled" id="indSubmenu">
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Technology
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Business
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Consulting
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            NGO
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Journalism
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Healthcare
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Research
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Other
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#comSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Company Size</a>
+                <ul class="collapse list-unstyled" id="comSubmenu">
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Start-up
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Small
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Medium
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Large
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#tiSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Timezone</a>
+                <ul class="collapse list-unstyled" id="tiSubmenu">
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            EST
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            CST
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            PST
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            International
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#grSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Grad Year</a>
+                <ul class="collapse list-unstyled" id="grSubmenu">
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            2020
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            2021
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            2022
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            2023
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            2024
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Other
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#mitSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Commitment</a>
+                <ul class="collapse list-unstyled" id="mitSubmenu">
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Part-time
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Full-time
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Co-op
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#prSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Prior Experience</a>
+                <ul class="collapse list-unstyled" id="prSubmenu">
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Required
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Not required
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#worSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Working Mode</a>
+                <ul class="collapse list-unstyled" id="worSubmenu">
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Remote
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            In-Person
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Hybrid
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Other
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#penSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Compensation</a>
+                <ul class="collapse list-unstyled" id="penSubmenu">
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Paid
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Unpaid
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Other
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#orgSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Organization Type</a>
+                <ul class="collapse list-unstyled" id="orgSubmenu">
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Business/For-profit
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Non-profit
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Government
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                            Other
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Page Content -->
+    <div id="content">
+        <!-- We'll fill this with dummy content -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-light">
+                <i class="fas fa-align-left"></i>
+                <span><img src="circle.png" alt="hamburger"/></span>
+            </button>
+
+        </div>
+    </nav>
+    
+        <!--modal buttons-->
+        <div class="modal-buttons">
+            <button class="modal-open" data-modal = "modal1">
+                <img src="https://static1.squarespace.com/static/5e802af05234e755946e7e50/t/5ec1ad863ca6b4722cf2a0ae/1596040572124/?format=1500w">
+            </button>
+    
+            <h1>Position name</h1>
+    
+        </div>
+
+        <div class="modal-buttons">
+            <button class="modal-open" data-modal = "modal2">
+                <img src="study.png">
+            </button>
+    
+            <h1>Position name</h1>
+    
+        </div>
+
+        <div class="modal-buttons">
+            <button class="modal-open" data-modal = "modal2">
+                <img src="1200px-Spotify_logo_without_text.svg.png">
+            </button>
+    
+            <h1>Position name</h1>
+    
+        </div>
+
+        
+        <!--modals-->
+        <div class="modal-container" id="modal1">
+            <div class="modal-content">
+                    <img src="https://static1.squarespace.com/static/5e802af05234e755946e7e50/t/5ec1ad863ca6b4722cf2a0ae/1596040572124/?format=1500w">
+                    <button class="btn-close">
+                        &times;
+                    </button>
+                    <h1><b>Data analyst</b> / the Women's Netowrk</h1>
+                        
+                    <p>Job description:</p>
+                    <ul>
+                        <li>Collect and manage the st ore of data efficiently</li>
+                        <li>Analyse data collected</li>
+                        <li>Develop product and business plans based off data analysis.</li>
+                    </ul>   
+            </div>
+        </div>
+
+        <div class="modal-container" id="modal2">
+            <div class="modal-content">
+                    <img src="study.png">
+                    <button class="btn-close">
+                        &times;
+                    </button>
+                    <h1><b>Data analyst</b> / the Women's Netowrk</h1>
+                        
+                    <p>Job description:</p>
+                    <ul>
+                        <li>Collect and manage the st ore of data efficiently</li>
+                        <li>Analyse data collected</li>
+                        <li>Develop product and business plans based off data analysis.</li>
+                    </ul>   
+            </div>
+        </div>
+
+        <div class="modal-container" id="modal3">
+            <div class="modal-content">
+                    <img src="1200px-Spotify_logo_without_text.svg.png">
+                    <button class="btn-close">
+                        &times;
+                    </button>
+                    <h1><b>Data analyst</b> / the Women's Netowrk</h1>
+                        
+                    <p>Job description:</p>
+                    <ul>
+                        <li>Collect and manage the st ore of data efficiently</li>
+                        <li>Analyse data collected</li>
+                        <li>Develop product and business plans based off data analysis.</li>
+                    </ul>   
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function () {
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
+});
+    </script>
+  </body>
+</html>
