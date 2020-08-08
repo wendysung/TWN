@@ -58,12 +58,14 @@ button{
     height: 200px;
     width: 200px;
     background-color: transparent;
+    padding: 0;
     
 }
 
 .modal-open img{
     width: 200px;
     height:  200px;
+    align-items: center;
  
 }
 
