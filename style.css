@@ -103,14 +103,29 @@ button{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     background-color: #fff;
     display: flex ;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
 
+}
+
+
+.modal-top{
+    width: inherit;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 40px;
+}
+
+
+.modal-bottom{
+    flex-direction: row;
+    display: grid;
 }
 
 /*modals content left*/
 .modal-left{
     margin-right: 20px;
+    grid-column: 1;
 }
 
 .modal-content .modal-left img{
@@ -118,16 +133,21 @@ button{
     height: 180px;
 }
 
+
+
 /*modals content right*/
 .modal-right{
     margin-left: 20px;
+    grid-column: 2;
 }
 
+
 .btn-close {
-    float: right;
+    position: aboslute;
     background-color: paleturquoise;
     color: black;
     top: 0;
+    float: right
     
 }
 
@@ -143,5 +163,4 @@ button{
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
-
 
